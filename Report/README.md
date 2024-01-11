@@ -17,3 +17,5 @@ Before running this step, data needs to be processed using the stata codes.
 4. Aggregate the text files and paste them onto a word file with the images.
 
 > C:\Users\Keitaro Ninomiya\Box\IAR_nino\Report\MakeReport.ipynb
+
+5. Edit the word file.
