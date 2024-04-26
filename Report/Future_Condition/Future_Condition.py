@@ -34,10 +34,10 @@ class HousingMarketFuture:
         return paragraph
         
     def P2(self):
-        S1="As a complement to the median housing price index (HPI), the SHDRE HPI forecasts a "+Adj(self.TP2["foreCGrowIL"][4].round(2),4)+" growth trend for Illinois."
-        S2="As a complement to the median housing price index (HPI), the SHDRE HPI forecasts a "+Adj(self.TP2["foreCGrowIL"][4].round(2),4)+" growth trend for the Chicago PMSA"
-        S3="In Illinois, the SHDRE HPI (Jan 2008=1) is forecast to change by "+str(100*self.TP2["foreCGrowIL"][4].round(1))+"% in "+self.PostMonth+", "+str(100*self.TP2["foreCGrowIL"][5].round(2))+"% in "+self.PPstMonth+", and "+str(100*self.TP2["foreCGrowCH"][6].round(1))+"% in "+self.PPPtMonth+". "
-        S4="The comparable figures for the Chicago PMSA are "+str(100*self.TP2["foreCGrowCH"][4].round(2))+"% in "+self.PostMonth+", "+str(100*self.TP2["foreCGrowCH"][5].round(2))+"% in "+self.PPstMonth+", and "+str(self.TP2["foreCGrowCH"][6].round(2)*100)+"% in "+self.PPPtMonth+". "
+        S1="As a complement to the median housing price index (HPI), the SHDRE HPI forecasts a "+Adj(self.TP2["foreCGrowIL"][4].round(3),4)+" growth trend for Illinois."
+        S2="As a complement to the median housing price index (HPI), the SHDRE HPI forecasts a "+Adj(self.TP2["foreCGrowIL"][4].round(3),4)+" growth trend for the Chicago PMSA"
+        S3="In Illinois, the SHDRE HPI (Jan 2008=1) is forecast to change by "+str(100*self.TP2["foreCGrowIL"][4].round(3))+"% in "+self.PostMonth+", "+str(100*self.TP2["foreCGrowIL"][5].round(3))+"% in "+self.PPstMonth+", and "+str(100*self.TP2["foreCGrowCH"][6].round(3))+"% in "+self.PPPtMonth+". "
+        S4="The comparable figures for the Chicago PMSA are "+str(100*self.TP2["foreCGrowCH"][4].round(3))+"% in "+self.PostMonth+", "+str(100*self.TP2["foreCGrowCH"][5].round(3))+"% in "+self.PPstMonth+", and "+str(self.TP2["foreCGrowCH"][6].round(3)*100)+"% in "+self.PPPtMonth+". "
         S5="SHDRE HPI takes housing characteristics into account and constructs comparable “baskets” of homes for each month."
         S6="(Reference: Housing Price Index)"
         paragraph = S1+S2+S3+S4+S5
@@ -48,8 +48,8 @@ class HousingMarketFuture:
         S2="The sales forecast for "+self.PostMonth+", "+self.PPstMonth+", and "+self.PPPtMonth+" suggests a "+Adj(100*self.TP3["TMGrowthIL_LB"][6].round(2),4)+" on a monthly basis for Illinois. "
         S3="The sales forecast for "+self.PostMonth+", "+self.PPstMonth+", and "+self.PPPtMonth+" suggests a "+Adj(100*self.TP3["TAGrowthCH_LB"][6].round(2),4)+" on a yearly  basis for the Chicago PMSA. "
         S4="The sales forecast for "+self.PostMonth+", "+self.PPstMonth+", and "+self.PPPtMonth+" suggests a "+Adj(100*self.TP3["TMGrowthCH_LB"][6].round(2),4)+" on a monthly basis for the Chicago PMSA. "
-        S5="Annually for Illinois, the three-month average forecasts point to a "+Adj(100*self.TP3["TAGrowthIL_LB"][6].round(2),4)+" in the range of "+str(100*self.TP3["TAGrowthIL_LB"][6].round(2))+" to "+str(100*self.TP3["TAGrowthIL_UB"][6].round(2))+"%; the comparative figures for the Chicago PMSA are a "+Adj(100*self.TP3["TAGrowthCH_LB"][6].round(2),4)+" in the range of "+str(100*self.TP3["TAGrowthCH_LB"][6].round(2))+"% to "+str(100*self.TP3["TAGrowthIL_UB"][6].round(2))+"%. "
-        S6="On a monthly basis, the three-month average sales are forecast to "+Adj(self.TP3["TMGrowthIL_LB"][6],4)+" in the range of "+str(100*self.TP3["TMGrowthIL_LB"][6].round(2))+"% to "+str(100*self.TP3["TMGrowthIL_UB"][6].round(2))+"% for Illinois and "+Adj(self.TP3["TMGrowthCH_LB"][6],4)+" in the range of "+str(100*self.TP3["TMGrowthCH_LB"][6].round(2))+"% to "+str(100*self.TP3["TMGrowthCH_UB"][6].round(2))+"% for the Chicago PMSA."
+        S5="Annually for Illinois, the three-month average forecasts point to a "+Adj(100*self.TP3["TAGrowthIL_LB"][6].round(3),4)+" in the range of "+str(100*self.TP3["TAGrowthIL_LB"][6].round(3))+" to "+str(100*self.TP3["TAGrowthIL_UB"][6].round(3))+"%; the comparative figures for the Chicago PMSA are a "+Adj(100*self.TP3["TAGrowthCH_LB"][6].round(2),4)+" in the range of "+str(100*self.TP3["TAGrowthCH_LB"][6].round(3))+"% to "+str(100*self.TP3["TAGrowthCH_UB"][6].round(3))+"%. "
+        S6="On a monthly basis, the three-month average sales are forecast to "+Adj(self.TP3["TMGrowthIL_LB"][6],4)+" in the range of "+str(100*self.TP3["TMGrowthIL_LB"][6].round(3))+"% to "+str(100*self.TP3["TMGrowthIL_UB"][6].round(3))+"% for Illinois and "+Adj(self.TP3["TMGrowthCH_LB"][6],4)+" in the range of "+str(100*self.TP3["TMGrowthCH_LB"][6].round(3))+"% to "+str(100*self.TP3["TMGrowthCH_UB"][6].round(3))+"% for the Chicago PMSA."
         S7="(Reference: Forecast for "+self.Month+" "+self.Year+" report table)"
         paragraph = S1+S2+S3+S4+S5+S6+S7
         return paragraph
@@ -57,7 +57,7 @@ class HousingMarketFuture:
     def P4(self):
         S1="The pending home sales index  is a leading indicator based on contract signings."
         S2="This "+self.Month+", the number of homes put under contract was "+Adj(self.TP4["pendingGrowthIL"][3],3)+" than last year in Illinois and Chicago PMSA. "
-        S3="The pending home sales index is "+str(self.TP4["ILpending"][3].round(2))+" (2019=100) in Illinois, "+Adj(self.TP4["pendingGrowthIL"][3],2)+" "+str(100*self.TP4["pendingGrowthIL"][3].round(2))+"% from a year ago. "
+        S3="The pending home sales index is "+str(self.TP4["ILpending"][3].round(2))+" (2019=100) in Illinois, "+Adj(self.TP4["pendingGrowthIL"][3],2)+" "+str(self.TP4["pendingGrowthIL"][3].round(2))+"% from a year ago. "
         S4="In the Chicago PMSA, the comparable figure is "+str(self.TP4["CHpending"][3].round(2))+" "+Adj(self.TP4["pendingGrowthCH"][3],2)+" "+str(self.TP4["pendingGrowthCH"][3].round(2))+"% from a year ago. "  
         S5="(Reference: Illinois and Chicago PMSA Pending Home Sales Index figure)"
         paragraph = S1+S2+S3+S4+S5
